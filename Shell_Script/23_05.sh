@@ -1,3 +1,11 @@
+#Atividade das aulas 18 e 19
+#editor usado vim
+# vim 23_05.sh, para abrir o editor
+# chmod +x 23_05.sh para permitir sua execucao
+# ./23_05.sh, para executar
+# para executa lo a cada 5 minutos:
+# no cromtab -e, abre se o editor
+# e nele colocado */5 * * * * bash /home/pedroaleph/23_05.h, salvo e fechado
 #!/bin/bash
 echo "Hora e data"
 echo "" 
