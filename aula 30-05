@@ -1,0 +1,59 @@
+Eu resovi pular a questão 1 por que não seria nada mais que somente pegar codigo do repositorio
+e reproduzir na minha maquina, eu não entendi o tutorial e não quero somente pegar já pronto, por favor 
+me explique depois
+
+questão 2 - Com relação a dispositivos de entrada e saída, e utilizando o slides número 21 da disciplina,
+apresente um descrição do funcionamento do RAID no sistema operacional Linux.
+
+- Resposta, pode ser encontrada por aqui : https://unixuniverse.com.br/linux/com-raid (eu que isso pareceu contráditorio
+ja que na primeira questão eu não quis fazer isso, mas considero somente uma explicação algo mais mundano, não se compara
+com uma implementação em código)
+
+Existem diversos métodos de aplicações do RAID, para essa questão temos RAID por sofware, que pode ser configurado
+através do modo kernel do linux. Nele, a CPU gerencia todo o processo de RAID e, caso seu PC seja mais antigo,
+poderá ter perda de desempenho já que a CPU vai trabalhar mais.
+
+RAID 0
+A matriz RAID 0 funciona dividindo os dados em partes e distribuindo-os pelos discos disponíveis.
+Isso significa que cada disco contém uma parte dos dados e que vários discos serão referenciados ao recuperar informações.
+
+Requisitos: mínimo de 2 dispositivos de armazenamento
+Benefício principal: desempenho.
+Pontos a serem lembrados: verifique se você tem backups funcionais. 
+A falha de um único dispositivo destruirá todos os dados na matriz.
+
+RAID 1
+O tipo de matriz RAID 1 é implementado espelhando os dados em todos os discos disponíveis.
+Cada disco em uma matriz RAID 1 obtém uma cópia completa dos dados,
+fornecendo redundância no caso de uma falha do dispositivo.
+
+Requisitos: mínimo de 2 dispositivos de armazenamento
+Benefício principal: Redundância
+Coisas a ter em conta: uma vez que são mantidas duas cópias dos dados, apenas metade do espaço em disco será utilizável
+
+RAID 5
+O tipo de matriz RAID 5 é implementado ao distribuir dados pelos dispositivos disponíveis. 
+Um componente de cada faixa é um bloco de paridade calculado. 
+Se um dispositivo falhar, o bloco de paridade e os blocos restantes poderão ser usados para calcular os dados ausentes. 
+O dispositivo que recebe o bloco de paridade é verificado para que cada dispositivo 
+tenha uma quantidade equilibrada de informações de paridade.
+
+Requisitos: mínimo de 3 dispositivos de armazenamento
+Benefício primário: Redundância com mais capacidade utilizável.
+Pontos a ter em mente: Enquanto as informações de paridade são distribuídas, 
+o valor de capacidade de um disco será usado para paridade. 
+O RAID 5 pode sofrer um desempenho muito ruim quando está em um estado degradado.
+
+RAID 10
+O tipo de matriz RAID 10 é implementado tradicionalmente criando um array RAID 0 distribuído, 
+composto de conjuntos de matrizes RAID 1. 
+Esse tipo de matriz aninhada fornece redundância e alto desempenho, 
+às custas de grandes quantidades de espaço em disco. 
+O mdadm tem seu próprio tipo de RAID 10 que fornece o mesmo tipo de benefícios do tradicional com maior flexibilidade. 
+Não é criado por matrizes de aninhamento, mas tem muitas das mesmas características e garantias.
+
+Requisitos: mínimo de 4 dispositivos de armazenamento
+Benefício principal: desempenho e redundância
+Pontos a serem lembrados: a quantidade de redução de capacidade da matriz é definida 
+pelo número de cópias de dados que você deseja manter. 
+O número de cópias armazenadas com o RAID 10 é configurável.
