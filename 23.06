@@ -1,0 +1,25 @@
+Sistemas Operacionais para computadores quânticos
+
+A computação quântica è uma área de pesquisa recente e ainda
+bastante instável, pois a vávios desafios para se resolver
+
+Pontos importantes quanto ao seu uso:
+
+- ele é usado somente para aplicações especificas
+- Não há previsão concreta de quando seria possivel seu uso
+  em larga escala como os computadores clássicos de uso pessoal
+- suas aplicaçoes não necessintam de um sistema operacional para gerencia-las
+- ele faz somente uma coisa muito bem, operando em insolação total
+ 
+ A minha conclusão é: não é nem preciso que ele tenha um SO ainda,
+ pois SOs servem para ajudar o asuario a gereciar suas tarefas, mas
+ computadores quanticos realizam somente uma tarefa, e SOs são mais
+ usados por pessoas leigas, computadores quâticos ainda não são 
+ acessíveis a todos.
+ 
+ Mas a pesquisas há de SOs quânticos(por assim dizer), com muitos
+ resultados negativos ainda.
+ 
+Fontes:
+https://www.quora.com/What-OS-will-quantum-computers-use-and-why
+https://www.henrycg.com/files/academic/papers/hotos17quantum.pdf
